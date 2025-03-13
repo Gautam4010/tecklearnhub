@@ -1,0 +1,454 @@
+/* Custom styling for the navbar if needed */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("bgimage.webp");
+    background-size: cover;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensure the navbar stays on top */
+}
+
+        /* Navbar Link Hover Effect */
+        .navbar-nav .nav-link:hover {
+            background-color: #555;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Dropdown Item Hover Effect */
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Categories Dropdown Toggle Hover Effect */
+        .navbar-nav .nav-item.dropdown:hover .nav-link {
+            background-color: #444;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Search Bar Hover Effect */
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Button Hover Effect */
+        .btn-outline-light:hover {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
+
+
+
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-item a {
+    font-size: 14px;
+}
+
+.dropdown-menu {
+    width: 250px;
+    background-color: aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Additional styling for the main content */
+main {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #555;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-item.dropdown:hover .nav-link {
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s ease;
+    position:fixed;
+    top:0px;
+}
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-outline-light:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+
+
+
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            border-right: 2px solid black;
+            display: inline-block;
+        }
+
+/* Keyframes for rotating the border */
+@keyframes rotateBorder {
+    0% {
+      border-image: linear-gradient(45deg, rgba(255, 182, 193, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 239, 148, 0.6), rgba(144, 238, 144, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 182, 193, 0.6));
+      border-image-slice: 1;
+    }
+    50% {
+      border-image: linear-gradient(135deg, rgba(255, 182, 193, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 239, 148, 0.6), rgba(144, 238, 144, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 182, 193, 0.6));
+      border-image-slice: 1;
+    }
+    100% {
+      border-image: linear-gradient(225deg, rgba(255, 182, 193, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 239, 148, 0.6), rgba(144, 238, 144, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 182, 193, 0.6));
+      border-image-slice: 1;
+    }
+  }
+  
+
+
+
+  
+  
+/* Ensure the dropdown button has relative positioning */
+.dropdown {
+    position: relative;
+}
+
+/* Set the dropdown menu to have a higher z-index and position it correctly */
+.dropdown-menu {
+    position: absolute;
+    z-index: 1050; /* Higher z-index to make sure it appears above other elements */
+}
+
+
+/* Custom CSS for Icon Styling */
+.icon-size {
+    font-size: 3rem; /* Increase icon size */
+    transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+/* Hover effect for rotating icons */
+.icon-size:hover {
+    transform: rotate(360deg); /* Rotate the icon when hovered */
+}
+
+/* Card Styling */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+/* Icon size and alignment */
+.icon-size {
+    font-size: 6rem; /* Adjust the icon size */
+    display: block;
+    margin: 0 auto 10px; /* Centers the icon horizontally and adds space below it */
+}
+
+
+/* Card title and icon alignment */
+.card-title {
+    display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center the icon and text horizontally */
+    justify-content: center; /* Center the content vertically */
+    text-align: center; /* Ensure the text is centered under the icon */
+}
+
+/* Card body layout */
+.card-body {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    height: 200px; /* Adjust the height to fit the content */
+}
+
+/* Flexbox for button centering */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center; /* Center the content horizontally */
+}
+
+.align-items-center {
+    align-items: center; /* Center the content vertically */
+}
+
+  /* Adding a glow effect for extra shine */
+  .animated-border::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, rgba(255, 182, 193, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 239, 148, 0.6), rgba(144, 238, 144, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 182, 193, 0.6));
+    z-index: -1;
+    animation: glowing-border 5s linear infinite;  /* Animation for glowing effect */
+    border-radius: 15px;  /* Rounded corners */
+  }
+  
+/* Default card styling */
+.card {
+    transition: all 0.4s ease-in-out;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(236, 250, 184);
+    
+}
+
+/* Hover effect with animated gradient */
+.card:hover {
+    color: white; /* Text color change */
+    transform: scale(1.05); /* Slight zoom effect */
+    border: 2px solid #ff5733; /* Border color change */
+}
+
+/* Gradient background animation */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #ffb347, #ffcc33);
+    background-size: 400% 400%;
+    z-index: -1;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0; /* Hidden by default */
+}
+
+
+
+
+
+/* Show animated gradient on hover */
+.card:hover::before {
+    opacity: 1;
+    animation: gradientMove 2s linear infinite;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Button color change on hover */
+.card:hover .btn-primary {
+    background-color: #ff5733;
+    border-color: #ff5733;
+}
+
+/* Icon color change */
+.card:hover .card-title i {
+    color: yellow;
+}
+
+
+
+
+.feedback-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.feedback-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.feedback-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+      /* WhatsApp Floating Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* Start from left */
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        font-size: 30px;
+        transition: all 0.3s ease-in-out;
+        animation: moveButton 20s infinite alternate ease-in-out;
+    }
+
+    /* Animation: Move Left to Right */
+    @keyframes moveButton {
+        0% {
+            left: 20px;
+        }
+        100% {
+            left: calc(100% - 80px);
+        }
+    }
+
+    /* Click Effect: Expand Before Opening */
+    .whatsapp-float.clicked {
+        transform: scale(1.5);
+        background-color: #1EBE5D;
+        animation: none; /* Stop animation on click */
+    }
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    margin: 10px;
+    
+ 
+
+footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #007bff;
+}
+
+.social-media a {
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+/* Ensure footer layout adjusts on smaller screens */
+@media (max-width: 768px) {
+    footer h5 {
+        font-size: 16px;
+    }
+    
+    footer ul li {
+        margin-bottom: 8px;
+    }
+    
+    .social-media a {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 576px) {
+    footer h5 {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+
