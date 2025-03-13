@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            color: white;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .roadmap-section {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .roadmap-section:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .dark-mode {
+            background: linear-gradient(135deg, #121212, #1F1F1F);
+            color: white;
+        }
+        .dark-mode a {
+            color: #00D4FF;
+        }
+        .toggle-btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+            border-radius: 25px;
+            background: #FFD700;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .toggle-btn:hover {
+            background: #FFC300;
+            transform: scale(1.1);
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #FFD700;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-50%) translateX(0);
+            }
+            50% {
+                transform: translateY(-50%) translateX(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Programming Roadmap</h1>
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        <div class="roadmap-section">
+            <h2>Step 1: Python Basics (1-2 Weeks)</h2>
+            <p>👉 Objective: Python ki syntax aur basic concepts samajhna.</p>
+            <p>🔹 <a href="#">Install Python aur ek IDE (VS Code / PyCharm / Jupyter Notebook)</a></p>
+            <p>🔹 <a href="#">Python Syntax, Variables, Data Types</a></p>
+            <span class="arrow">➡️</span>
+        </div>
+
+        <div class="roadmap-section">
+            <h2>Step 2: Intermediate Python (3-4 Weeks)</h2>
+            <p>👉 Objective: Python ke powerful features ko explore karna.</p>
+            <p>🔹 <a href="#">File Handling</a></p>
+            <p>🔹 <a href="#">Exception Handling</a></p>
+            <span class="arrow">➡️</span>
+        </div>
+
+        <div class="roadmap-section">
+            <h2>Step 3: Object-Oriented Programming (1-2 Weeks)</h2>
+            <p>👉 Objective: Real-world applications ke liye OOP concepts samajhna.</p>
+            <p>🔹 <a href="#">Class & Objects</a></p>
+            <p>🔹 <a href="#">Inheritance, Polymorphism, Encapsulation</a></p>
+            <span class="arrow">➡️</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

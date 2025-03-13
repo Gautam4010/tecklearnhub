@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            text-align: center;
+        }
+        header {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid;
+            border-color: #ff5722 #4caf50 #2196f3 #ffeb3b;
+            transition: transform 1s ease-in-out, border-color 0.3s;
+        }
+        .profile-img:hover {
+            animation: rotateSlide 1s ease-in-out;
+        }
+        @keyframes rotateSlide {
+            0% { transform: rotate(0deg) translateX(0); }
+            50% { transform: rotate(-90deg) translateX(-200px); opacity: 0; }
+            51% { transform: rotate(90deg) translateX(200px); opacity: 0; }
+            100% { transform: rotate(0deg) translateX(0); opacity: 1; }
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        .skills {
+            background: #ffeb3b;
+            color: #333;
+        }
+        .projects {
+            background: #a5dba7;
+            color: #000000;
+        }
+        .projects a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background: #2e7d32;
+            margin: 5px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .projects a:hover {
+            background: #aaebae;
+        }
+        .contact {
+            background: #e6b4b1;
+            color: #000000;
+        }
+        .contact a {
+            color: #030303;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+            color: #000000;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>Welcome to My Personal Page</header>
+    <div class="container">
+        <img src="image3.jpg" alt="Your Photo" class="profile-img">
+        <h2>GAUTAM KUMAR MAHTO</h2>
+        <p>I am a Diploma student in the Computer Science and Engineering branch from Government Polytechnic Adityapur.</p>
+        
+        <div class="section skills">
+            <h3>Skills & Interests</h3>
+        </div>
+        
+        <div class="section projects">
+            <h3>My Projects</h3>
+            <a href="index.html" target="_blank">Visit My Website</a>
+        </div>
+        
+        <div class="section contact">
+            <h3>Contact Me</h3>
+            <p>Email: gautam4869@gmail.com</p>
+            <p>Contact number: 8210917242</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100041878939752" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/Gautam___4010?t=3OiSQy_kuVnv8DCIETVKvA&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            
+  
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

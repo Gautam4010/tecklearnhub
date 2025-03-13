@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 🌟 Gradient Background Animation */
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1);
+            animation: gradientBG 8s infinite alternate;
+        }
+
+        @keyframes gradientBG {
+            0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+            50% { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+            100% { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+        }
+
+        /* 🟢 Glassmorphism Card */
+        .glassmorphism {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* 🔵 Input Field Enhancements */
+        .input-field {
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgb(0, 0, 0);
+            padding: 12px;
+            border-radius: 8px;
+            width: 100%;
+            transition: 0.3s ease-in-out;
+            font-size: 16px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* 🔥 Button Styling */
+        .btn {
+            background: rgb(152, 171, 233);
+            color: #7b2cbf;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #7b2cbf;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(123, 44, 191, 0.4);
+        }
+
+        /* ✅ Responsive Heading */
+        .heading {
+            font-size: 2rem;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            padding: 10px;
+        }
+
+        @media (max-width: 640px) {
+            .heading {
+                font-size: 1.5rem;
+                padding: 5px;
+            }
+            .glassmorphism {
+                padding: 20px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .input-field {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+    <div class="heading text-white font-extrabold drop-shadow-lg mb-4">
+        Sign-In to Get Premium Notes! 📚
+    </div>
+    <div class="glassmorphism p-8 rounded-2xl shadow-2xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-white">Sign In</h2>
+        <form class="mt-6">
+            <div class="mb-4">
+                <input type="email" placeholder="✉️ Email Address" class="input-field">
+            </div>
+            <div class="mb-6 relative">
+                <input type="password" id="password" placeholder="🔒 Password" class="input-field pr-10">
+                <span onclick="togglePassword()" class="absolute right-3 top-3 cursor-pointer text-white text-xl">
+                    👁
+                </span>
+            </div>
+            <button class="btn w-full">Sign In</button>
+        </form>
+        <p class="text-center text-white mt-4">Don't have an account? 
+            <a href="#" class="underline hover:text-purple-300 transition">Sign Up</a>
+        </p>
+    </div>
+
+    <script>
+        function togglePassword() {
+            let passwordField = document.getElementById("password");
+            let icon = event.target;
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.textContent = "🙈"; // Eye closed
+            } else {
+                passwordField.type = "password";
+                icon.textContent = "👁"; // Eye open
+            }
+        }
+    </script>
+</body>
+</html>
