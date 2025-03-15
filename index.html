@@ -94,34 +94,41 @@
         <span class="close-btn">&times;</span>
         <h3>Select Your Branch</h3>
         <ul>
-            <li><i class="fas fa-laptop-code"></i> CSE</li>
-            <li><i class="fas fa-cogs"></i> Mechanical</li>
-            <li><i class="fas fa-cogs"></i> Metallurgical</li>
-            <li><i class="fas fa-road"></i> Civil</li>
-            <li><i class="fas fa-bolt"></i> Electrical</li>
-            <li><i class="fas fa-microchip"></i> ECE</li>
+            <li><a href="diploma/firstcse.html"style="text-decoration:none"><i class="fas fa-laptop-code"></i> CSE</a></li>
+            <li><a href="mechanical.html"style="text-decoration:none"><i class="fas fa-cogs"></i> Mechanical</a></li>
+            <li><a href="metallurgical.html"style="text-decoration:none"><i class="fas fa-cogs"></i> Metallurgical</a></li>
+            <li><a href="civil.html"style="text-decoration:none"><i class="fas fa-road"></i> Civil</a></li>
+            <li><a href="electrical.html"style="text-decoration:none"><i class="fas fa-bolt"></i> Electrical</a></li>
+            <li><a href="ece.html"style="text-decoration:none"><i class="fas fa-microchip"></i> ECE</a></li>
+
         </ul>
     </div>
 </div>
 
         
-    <!-- Floating Notification Button -->
-    <div id="notification-btn">
-        🔔
+      <!-- Notification Button -->
+      <button class="notification-btn" id="notificationBtn" >
+        🔔 Notifications
+        <span class="notification-badge">3</span>
+    </button>
+
+    <!-- Popup Notification Menu -->
+    <div class="popup-menu" id="popupMenu">
+        <ul>
+            <li>📢 New message from Admin</li>
+            <li>✅ Your task is completed</li>
+            <li>⚠️ System update available</li>
+        </ul>
     </div>
 
-    <!-- Notification Popup -->
-    <div id="notification-box">
-        <p id="notification-text">⚡ No new notifications!</p>
-    </div>
 
 
     <!-- Main Content -->
     <main class="container mt-5 pt-5">
 
-        <h1 class="site-name" id="siteName" style="height: 50px;">Learn With:</h1>
+        <h1 class="site-name" id="siteName" style="height: 50px;color: blue;">Learn With:</h1>
         <p>Prepare for academic exam and placement in minimum time without any hassle.</p>
-        <img src="image/profile.png" alt="profile" style="height: 300px; width: 300px;">
+        <img src="profile2.png" alt="profile" style="height: 300px; width: 300px;">
         <div class="row">
         <h2 class="title">Explore Your Course</h2>
         <P>We are building a website dedicated to providing high-quality notes for IT-related courses. This platform is designed to help students, professionals, and self-learners by offering well-structured, easy-to-understand, and comprehensive study materials. The website will cover a wide range of topics, including programming, networking, cybersecurity, and more. My goal is to create a valuable learning resource that simplifies complex concepts and makes education more accessible to everyone interested in IT.</P>
@@ -453,21 +460,21 @@
 
 
         // Toggle Notification Box
-                document.getElementById("notification-btn").addEventListener("click", function() {
-            let box = document.getElementById("notification-box");
-            box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+        let notificationBtn = document.getElementById("notificationBtn");
+        let popupMenu = document.getElementById("popupMenu");
+
+        // Button click par popup toggle karo
+        notificationBtn.addEventListener("click", function(event) {
+            event.stopPropagation(); // Event bubbling rokne ke liye
+            popupMenu.style.display = (popupMenu.style.display === "block") ? "none" : "block";
         });
 
-        // Function to Update Notification (Can be triggered dynamically)
-        function updateNotification(message) {
-            document.getElementById("notification-text").innerHTML = message;
-        }
-
-        // Example: Auto-Update Notification after 3 seconds
-        setTimeout(() => {
-            updateNotification("📢 New Course Available! Check it out.");
-        }, 3000);
-    
+        // Outside click par popup close karo
+        document.addEventListener("click", function(event) {
+            if (!popupMenu.contains(event.target) && event.target !== notificationBtn) {
+                popupMenu.style.display = "none";
+            }
+        });
 
         // for diploma popupmenu
        
