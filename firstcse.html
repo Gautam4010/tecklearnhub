@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Selection</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Times New Roman', Times, serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: rgb(228, 228, 228);
+            color: rgb(5, 2, 2);
+            padding-top: 60px;
+            position: relative;
+        }
+
+
+        /* for navbar */
+    
+        .navbar {
+        
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #e07373, #92f8fc);
+            padding: 15px 20px;
+            color: white;
+            z-index: 1000; /* Ensures navbar stays on top */
+        }
+
+        
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: linear-gradient(135deg, #e07373, #92f8fc);
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 60%;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu a {
+            padding: 10px 0;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+
+
+        /* for content */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            margin-top: calc(60px + 20px); /* Navbar ki height ke according adjust hoga */
+            background: linear-gradient(135deg, #e07373, #92f8fc);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 100px rgba(213, 247, 23, 0.2);
+        }
+
+        }
+     
+        h1 {
+            font-size: 28px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .semester-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .semester-buttons a {
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(14, 7, 7);
+            background: rgba(255, 255, 255, 0.89);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .semester-buttons a:hover {
+            background: rgba(204, 233, 41, 0.4);
+        }
+    </style>
+      
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    
+</head>
+<body>
+
+    <!-- for navigation bar -->
+
+    <nav class="navbar">
+        <div class="logo">TechLearnHub</div>
+        <ul class="nav-links">
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+            <li><a href="#"><i class="fas fa-comment"></i> Feedback</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> About Me</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="#"><i class="fas fa-comment"></i> Feedback</a>
+        <a href="#"><i class="fas fa-user"></i> About Me</a>
+    </div>   
+
+
+ <!-- for content -->
+    <div class="container">
+        <h1>Choose Your Semester</h1>
+        <p>Every semester is a new milestone in your academic journey. Select your semester to explore study materials, assignments, and more.</p>
+        <div class="semester-buttons">
+            <a href="second1cse.html">Semester 1</a>
+            <a href="#">Semester 2</a>
+            <a href="#">Semester 3</a>
+            <a href="#">Semester 4</a>
+            <a href="#">Semester 5</a>
+            <a href="#">Semester 6</a>
+            
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+</body>
+</html>
